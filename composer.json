@@ -1,0 +1,47 @@
+{
+    "name": "appserver-io-psr/mop",
+    "description": "PSR, defining annotations and interfaces for code transformation and enhancement.",
+    "homepage": "https://github.com/appserver-io-psr/mop",
+    "license": "OSL-3.0",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "appserver-io/build": "0.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "AppserverIo\\Psr\\MetaobjectProtocol": [
+                "src/"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "AppserverIo\\Psr\\MetaobjectProtocol": [
+                "tests/"
+            ]
+        }
+    },
+    "config": {
+        "github-oauth": {
+            "github.com": "604a3b5943228e434a5b52c2ba3cf72286d30db9"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bernhard Wick",
+            "email": "bw@appserver.io",
+            "homepage": "https://github.com/wick-ed",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "bw@appserver.io",
+        "issues": "https://github.com/appserver-io/appserver/issues",
+        "source": "https://github.com/appserver-io-psr/metaobject"
+    },
+    "keywords": [
+        "php metaobject aop dbc Design-by-Contract psr"
+    ]
+}
