@@ -14,11 +14,13 @@
  * @author    Bernhard Wick <bw@appserver.io>
  * @copyright 2015 TechDivision GmbH - <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
- * @link      https://github.com/appserver-io/doppelgaenger
+ * @link      https://github.com/appserver-io-psr/mop
  * @link      http://www.appserver.io/
  */
 
 namespace AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations;
+
+use AppserverIo\Lang\Reflection\ReflectionAnnotation;
 
 /**
  * Annotation class which is used to introduce new characteristics into a class.
@@ -27,13 +29,13 @@ namespace AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations;
  * @author    Bernhard Wick <bw@appserver.io>
  * @copyright 2015 TechDivision GmbH - <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
- * @link      https://github.com/appserver-io/doppelgaenger
+ * @link      https://github.com/appserver-io-psr/mop
  * @link      http://www.appserver.io/
  *
  * @Annotation
  * @Target({"CLASS"})
  */
-class Introduce
+class Introduce extends ReflectionAnnotation
 {
     /**
      * The annotation which identifies this annotation class
@@ -50,5 +52,25 @@ class Introduce
     public static function __getClass()
     {
         return __CLASS__;
+    }
+
+    /**
+     * Returns the value of the interface attribute.
+     *
+     * @return string The annotations interface attribute
+     */
+    public function getInterface()
+    {
+        return $this->values[AnnotationKeys::INTRODUCTION_INTERFACE];
+    }
+
+    /**
+     * Returns the value of the implementation attribute.
+     *
+     * @return string The annotations implementation attribute
+     */
+    public function getImplementation()
+    {
+        return $this->values[AnnotationKeys::IMPLEMENTATION];
     }
 }

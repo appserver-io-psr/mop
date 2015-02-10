@@ -14,7 +14,7 @@
  * @author    Bernhard Wick <bw@appserver.io>
  * @copyright 2015 TechDivision GmbH - <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
- * @link      https://github.com/appserver-io/doppelgaenger
+ * @link      https://github.com/appserver-io-psr/mop
  * @link      http://www.appserver.io/
  */
 
@@ -26,7 +26,7 @@ namespace AppserverIo\Psr\MetaobjectProtocol\Dbc\Annotations;
  * @author    Bernhard Wick <bw@appserver.io>
  * @copyright 2015 TechDivision GmbH - <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
- * @link      https://github.com/appserver-io/doppelgaenger
+ * @link      https://github.com/appserver-io-psr/mop
  * @link      http://www.appserver.io/
  *
  * @Annotation

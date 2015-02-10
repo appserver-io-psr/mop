@@ -19,4 +19,4 @@
  */
 
 $loader = require 'vendor/autoload.php';
-$loader->add('AppserverIo\\Psr\\EnterpriseBeans', 'src');
+$loader->add('AppserverIo\\Psr\\MetaobjectProtocol', 'src');

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * \AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations\Aspect
+ * \AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations\AnnotationKeys
  *
  * NOTICE OF LICENSE
  *
@@ -12,42 +12,37 @@
  * PHP version 5
  *
  * @author    Bernhard Wick <bw@appserver.io>
- * @copyright 2015 TechDivision GmbH - <info@appserver.io>
+ * @copyright 2015 TechDivision GmbH <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://github.com/appserver-io-psr/mop
- * @link      http://www.appserver.io/
+ * @link      http://www.appserver.io
  */
 
 namespace AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations;
 
 /**
- * Annotation class which is used to identify a class declaration as an aspect containing advices
+ * Utility class containing available annotation properties.
  *
  * @author    Bernhard Wick <bw@appserver.io>
- * @copyright 2015 TechDivision GmbH - <info@appserver.io>
+ * @copyright 2015 TechDivision GmbH <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://github.com/appserver-io-psr/mop
- * @link      http://www.appserver.io/
- *
- * @Annotation
- * @Target({"CLASS"})
+ * @link      http://www.appserver.io
  */
-class Aspect
+class AnnotationKeys
 {
+
     /**
-     * The annotation which identifies this annotation class
+     * Key for the annotation property 'interface'.
      *
      * @var string
      */
-    const ANNOTATION = 'Aspect';
+    const INTRODUCTION_INTERFACE = 'interface';
 
     /**
-     * This method returns the class name as a string
+     * Key for the annotation property 'implementation'.
      *
-     * @return string
+     * @var string
      */
-    public static function __getClass()
-    {
-        return __CLASS__;
-    }
+    const IMPLEMENTATION = 'implementation';
 }

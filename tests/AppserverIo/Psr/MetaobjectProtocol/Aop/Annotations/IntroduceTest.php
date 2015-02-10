@@ -1,7 +1,7 @@
 <?php
 
 /**
- * \AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations\Advices\After
+ * \AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations\IntroduceTest
  *
  * NOTICE OF LICENSE
  *
@@ -18,36 +18,34 @@
  * @link      http://www.appserver.io/
  */
 
-namespace AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations\Advices;
+namespace AppserverIo\Psr\MetaobjectProtocol\Aop\Annotations;
 
 /**
- * Annotation class which is used to specify "after" advice usage
+ * Simple test case as a foundation for further tests (if PSR gets extended)
  *
  * @author    Bernhard Wick <bw@appserver.io>
  * @copyright 2015 TechDivision GmbH - <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://github.com/appserver-io-psr/mop
  * @link      http://www.appserver.io/
- *
- * @Annotation
- * @Target({"METHOD","PROPERTY"})
  */
-class After
+class IntroduceTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * The annotation which identifies this annotation class
-     *
-     * @var string
-     */
-    const ANNOTATION = 'After';
 
     /**
-     * This method returns the class name as a string
+     * Tests if the getter can be used right after initialisation
      *
-     * @return string
+     * @return null
      */
-    public static function __getClass()
+    public function testIntroductionGetter()
     {
-        return __CLASS__;
+        $values = array(
+            AnnotationKeys::INTRODUCTION_INTERFACE => 'testInterface',
+            AnnotationKeys::IMPLEMENTATION => 'testImplementationTrait'
+        );
+        $introduce = new Introduce(Introduce::ANNOTATION, $values);
+
+        $this->assertEquals('testInterface', $introduce->getInterface());
+        $this->assertEquals('testImplementationTrait', $introduce->getImplementation());
     }
 }
