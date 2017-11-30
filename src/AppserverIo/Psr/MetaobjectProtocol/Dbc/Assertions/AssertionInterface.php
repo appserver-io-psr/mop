@@ -1,7 +1,7 @@
 <?php
 
 /**
- * \AppserverIo\Doppelgaenger\Interfaces\AssertionInterface
+ * \AppserverIo\Psr\MetaobjectProtocol\Dbc\Assertions\AssertionInterface
  *
  * NOTICE OF LICENSE
  *
@@ -12,7 +12,8 @@
  * PHP version 5
  *
  * @author    Bernhard Wick <bw@appserver.io>
- * @copyright 2015 TechDivision GmbH - <info@appserver.io>
+ * @author    Marcus Döllerer <md@appserver.io>
+ * @copyright 2017 TechDivision GmbH - <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://github.com/appserver-io/doppelgaenger
  * @link      http://www.appserver.io/
