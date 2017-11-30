@@ -85,7 +85,7 @@ interface AssertionInterface
     public function setPrivateContext($privateContext);
 
     /**
-     * Return a string representation of the classes logic as a piece of PHP code.
+     * Returns a string representation of the classes logic as a piece of PHP code.
      * Used to transfer important logic into generated code
      *
      * @return string
