@@ -1,4 +1,4 @@
-# Version 1.2.0
+# Version 1.2.1
 
 ## Bugfixes
 
@@ -7,6 +7,16 @@
 ## Features
 
 * Switch to latest appserver-io/lang branch ~3.0
+
+# Version 1.2.0
+
+## Bugfixes
+
+* None
+
+## Features
+
+* Fix some issues
 
 # Version 1.1.0
 
