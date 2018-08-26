@@ -42,6 +42,40 @@ class Requires
     const ANNOTATION = 'Requires';
 
     /**
+     * The assertion type to use.
+     *
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * The constraint to use for assertion.
+     *
+     * @var string
+     */
+    protected $constraint;
+
+    /**
+     * The constructor the initializes the instance with the
+     * data passed with the token.
+     *
+     * @param array $values The annotation values
+     */
+    public function __construct(array $values = array())
+    {
+
+        // set the name attribute, if available
+        if (isset($values[AnnotationKeys::TYPE])) {
+            $this->name = $values[AnnotationKeys::TYPE];
+        }
+
+        // set the constraint attribute, if available
+        if (isset($values[AnnotationKeys::CONSTRAINT])) {
+            $this->constraint = $values[AnnotationKeys::CONSTRAINT];
+        }
+    }
+
+    /**
      * This method returns the class name as a string
      *
      * @return string
@@ -49,5 +83,25 @@ class Requires
     public static function __getClass()
     {
         return __CLASS__;
+    }
+
+    /**
+     * Returns the value of the name attribute.
+     *
+     * @return string|null The annotations name attribute
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * Returns the value of the constraint attribute.
+     *
+     * @return string|null The annotations constraint attribute
+     */
+    public function getConstraint()
+    {
+        return $this->constraint;
     }
 }
