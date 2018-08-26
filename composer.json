@@ -5,7 +5,7 @@
   "license": "OSL-3.0",
   "require": {
     "php": ">=5.4.0",
-    "appserver-io/lang": "^4.0"
+    "appserver-io/lang": "^5.0"
   },
   "require-dev": {
     "appserver-io/build": "^2.0"
